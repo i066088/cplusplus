@@ -95,3 +95,22 @@ int main()
    v.insert(v.begin() + 1, MemoryBlock(50));  
 }  
 
+
+/*
+
+The output is:
+
+In MemoryBlock(size_t). length = 25.
+In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.
+In ~MemoryBlock(). length = 25. Deleting resource.
+In MemoryBlock(size_t). length = 50.
+In MemoryBlock(const MemoryBlock&). length = 50. Copying resource.
+In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.
+In ~MemoryBlock(). length = 25. Deleting resource.
+In ~MemoryBlock(). length = 50. Deleting resource.
+In ~MemoryBlock(). length = 25. Deleting resource.
+In ~MemoryBlock(). length = 50. Deleting resource.
+
+
+
+*/
