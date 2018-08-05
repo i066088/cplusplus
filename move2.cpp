@@ -58,3 +58,16 @@ int main()
     D d1;
     D d2 = std::move(d1);
 }
+
+/*
+The output is:
+
+Trying to move A
+Trying to move B
+Before move, b1.s = "test"
+After move, b1.s = ""
+Trying to move C
+move failed!
+Trying to move D
+
+*/
